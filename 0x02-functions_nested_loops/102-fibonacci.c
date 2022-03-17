@@ -16,7 +16,6 @@ int main(void)
 	{
 		sum = fib1 + fib2;
 		printf("%lu", sum);
-		
 		fib1 = fib2;
 		fib2 = sum;
 
@@ -25,7 +24,5 @@ int main(void)
 		else
 			printf(", ");
 	}
-	
 	return (0);
-
 }

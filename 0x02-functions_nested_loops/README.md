@@ -1,1 +1,1 @@
-Write a function that checks for lowercase character. Prototype: int _islower(int c);
+Write a function that checks for alphabetic character. Prototype: int _isalpha(int c)

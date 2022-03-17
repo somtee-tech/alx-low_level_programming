@@ -10,13 +10,11 @@
 
 
 /**
- *
  * times_table - Prints the 9 times table, starting with 0.
  *
  */
 
 void times_table(void)
-
 {
 
 	int num, mult, prod;
@@ -60,5 +58,4 @@ void times_table(void)
 		_putchar('\n');
 
 	}
-
 }

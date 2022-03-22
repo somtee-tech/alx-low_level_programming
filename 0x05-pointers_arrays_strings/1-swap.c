@@ -18,4 +18,6 @@ void swap_int(int *a, int *b)
 	temp = *b;
 	*b = *a;
 	*a = temp;
+	printf("a: %d\n", a);
+	printf("b: %d\n", b);
 }

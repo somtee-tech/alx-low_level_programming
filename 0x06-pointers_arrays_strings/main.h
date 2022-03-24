@@ -1,6 +1,6 @@
-#ifndef HEADER_FILE
+#ifndef MAIN_H
 
-#define HEADER_FILE
+#define MAIN_H
 
 int _putchar(char c);
 

@@ -13,6 +13,7 @@
 void print_buffer(char *b, int size)
 {
 	int i, j;
+
 	if (size <= 0)
 		printf("\n");
 	else

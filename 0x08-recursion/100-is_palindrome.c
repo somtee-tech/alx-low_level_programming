@@ -1,64 +1,65 @@
 #include "main.h"
 
-/**
- * is_palindrome-  Returns the natural square root of a number.
- *
- * @s: int type
- *
- * Return: char type
- */
+int palcheck(char *c, int len, int i);
 
+/**
+ * is_palindrome - calls funcions to check length then check if palindorme
+ *
+ * @s:string
+ *
+ * Return:1 if palindorme 0 if not
+ */
 int is_palindrome(char *s)
 {
-	int first, last;
+	int l, i;
 
-	first = 0;
-	last = _strlen_recursion(s) - 1;
-	return (palindrome(s, first, last));
+	i = 0;
+	l =  _strlen_recursion(s);
+	return (palcheck(s, l, i));
 }
 
 /**
- * palindrome - Entry point
+ * palcheck - check if palindorme
  *
- * Desc: palindrome
+ * @c:string
  *
- * @s: char type
+ * @len: length of string
  *
- * @first: int type
+ * @i: index
  *
- * @last: int type
- *
- * Return: Recursion
+ * Return:1 if palindorme 0 if not
  */
 
-int palindrome(char *s, int first, int last)
+int palcheck(char *c, int len, int i)
 {
-	if (first > last)
+	if (c[i] == c[len / 2])
 	{
 		return (1);
-		else if (s[first] == s[last])
-		{
-			return (palindrome(s, first + 1, last - 1));
-		}
-		else
-			return (0);
 	}
+	if (c[i] == c[len - i - 1])
+	{
+		return (palcheck(c, len, i + 1));
+	}
+	return (0);
+}
 
 /**
- * _strlen_recursion - Entry point
+ * _strlen_recursion - messurse string
  *
- * Desc: _strlen_recursion
+ * @s:string to messure
  *
- * @s: char type
- *
- * Return: Function that returns the length of a string.
+ * Return:length
  */
 
 int _strlen_recursion(char *s)
 {
+	int len;
+
+	len = 0;
 	if (*s != '\0')
 	{
-		return (1 + _strlen_recursion(s + 1));
+		len++;
+		return (len + _strlen_recursion(s + 1));
 	}
-	return (0);
+	return (len);
 }

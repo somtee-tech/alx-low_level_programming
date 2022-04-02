@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - prints the number of arguments passed into it.
- * @argc: count the argument
- * @agrv: points to the array of strings
+ * main - prints the number of arguments passed into it
+ * @argc: argument count
+ * @argv: points to the array of strings
  * Return: Always 0 for success
  */
 

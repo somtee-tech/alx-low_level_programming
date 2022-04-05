@@ -1,39 +1,38 @@
-#include "main.h"
-#include <string.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * _strdup - returns pointer to a new string duplicate of str
- * @str: string to get duplicate form
- * Return: NULL if str is NULL, on success return pointer to the string
+ *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
 
 char *_strdup(char *str)
 {
-	char *strDup;
+	char *dup;
 
-	int i, j;
+	unsigned int i, len;
+
+	i = 0;
+
+	len = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	i = 0;
+	while (str[len])
 
-	while (str[i] != '\0')
-		i++;
-	i++;
+		len++;
 
-	strDup = malloc(sizeof(*str) * i);
-	if (strDup == NULL)
+
+	dup = malloc(sizeof(char) * (len + 1));
+
+	if (dup == NULL)
 		return (NULL);
-	j = 0;
-	while (str[j] != '\0')
-	{
-		strDup[j] = str[j];
 
-		j++;
+	while ((dup[i] = str[i]) != '\0')
 
-	}
+		i++;
 
-	return (strDup);
-
+	return (dup);
+}

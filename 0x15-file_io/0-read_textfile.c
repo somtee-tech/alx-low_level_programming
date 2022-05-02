@@ -7,7 +7,6 @@
  *
  * Return: numbers of letters printed. It fails, returns 0.
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
@@ -28,7 +27,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	nrd = read(fd, buf, letters);
 	nwr = write(STDOUT_FILENO, buf, nrd);
-
 	close(fd);
 
 	free(buf);
